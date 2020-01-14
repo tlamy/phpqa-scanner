@@ -9,7 +9,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run tests
-      run: |
-        composer install
-        composer test
+    - name: Install PHP dependencies
+      run: composer install
+    - name: Cache
+      uses: actions/cache@v1.1.0
+      with:
+        # A directory to store and save the cache
+        path: ~/.composer/cache
+        key: composer-cache
+    - name: Run unit-tests
+      run: composer test
