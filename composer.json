@@ -18,6 +18,17 @@
     "vimeo/psalm": "^3.8",
     "rector/rector": "^0.6.10"
   },
-  "autoload": { "psr-4": {"PhpQA\\Sanner\\": "src"}},
-  "autoload-dev": { "psr-4": {"Tests\\": "tests"}}
+  "autoload": {
+    "psr-4": {
+      "PhpQA\\Sanner\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit -c phpunit.xml"
+  }
 }

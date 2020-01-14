@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run tests
       run: |
-        compoer install
+        composer install
         composer test
